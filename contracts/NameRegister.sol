@@ -37,8 +37,7 @@ contract NameRegister is INameRegister, Ownable {
     //                USER CALLED FUNCTIONS              //
     ///////////////////////////////////////////////////////
 
-    function reserveName(string memory _name) external override {
-        bytes32 _hash = keccak256(abi.encodePacked(_name));
+    function reserveName(bytes32 _hash) external override {
         Info storage info = infos[_hash];
 
         // check registered

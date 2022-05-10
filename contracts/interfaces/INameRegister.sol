@@ -19,7 +19,7 @@ interface INameRegister {
             uint256
         );
 
-    function reserveName(string memory _name) external;
+    function reserveName(bytes32 _hash) external;
 
     function registerName(string memory _name) external payable;
 
